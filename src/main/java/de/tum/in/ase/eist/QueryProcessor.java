@@ -14,8 +14,10 @@ public class QueryProcessor {
             if(query.contains("plus")) {
                 // what is 12 plus 3
                 // what is 2 plus 23
-                int first = Integer.parseInt(query.substring(8,10).strip());
-                int second = Integer.parseInt(query.substring(15).strip());
+                String[] tokens = query.split(" ");
+
+                int first = Integer.parseInt(tokens[2]);
+                int second = Integer.parseInt(tokens[4]);
                 int result = first + second;
                 return String.valueOf(result);
             }
