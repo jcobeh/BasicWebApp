@@ -8,7 +8,7 @@ public class QueryProcessor {
     public String process(String query) {
 		query = query.toLowerCase();
         if(query.contains("name")) {
-            return "my name is jake the snake";
+            return "jake the snake";
         }
         if (query.contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
