@@ -10,14 +10,21 @@ public class QueryProcessor {
         if(query.contains("name")) {
             return "jake the snake";
         }
+        if(query.contains("which of the following numbers is the largest")) {
+            String[] tokens = query.split(": ")[1].split(", ");
+            int largest = -1;
+            for(int i = 0; i < tokens.length; i++) {
+
+            }
+        }
         if(query.contains("what is")) {
             if(query.contains("plus")) {
                 // what is 12 plus 3
                 // what is 2 plus 23
                 String[] tokens = query.split(" ");
 
-                int first = Integer.parseInt(tokens[2]);
-                int second = Integer.parseInt(tokens[4]);
+                int first = Integer.parseInt(tokens[3]);
+                int second = Integer.parseInt(tokens[5]);
                 int result = first + second;
                 return String.valueOf(result);
             }

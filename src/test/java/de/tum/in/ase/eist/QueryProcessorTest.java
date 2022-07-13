@@ -32,8 +32,14 @@ class QueryProcessorTest {
 
 	@Test
 	void testSummation() {
-		String actual = queryProcessor.process("what is 12 plus 3");
+		String actual = queryProcessor.process("xy: what is 12 plus 3");
 		assertEquals("15", actual);
 	}
+
+	// which of the following numbers is the largest: 208, 95
+//	@Test void testLargest() {
+//		String actual = queryProcessor.process("xy: which of the following numbers is the largest: 208, 95");
+//		assertEquals("208", actual);
+//	}
 
 }
