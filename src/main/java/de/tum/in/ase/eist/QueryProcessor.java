@@ -7,7 +7,7 @@ public class QueryProcessor {
 
     public String process(String query) {
 		query = query.toLowerCase();
-        if(query.contains("what is your name")) {
+        if(query.contains("name")) {
             return "my name is jake the snake";
         }
         if (query.contains("shakespeare")) {
