@@ -37,9 +37,9 @@ class QueryProcessorTest {
 	}
 
 	// which of the following numbers is the largest: 208, 95
-//	@Test void testLargest() {
-//		String actual = queryProcessor.process("xy: which of the following numbers is the largest: 208, 95");
-//		assertEquals("208", actual);
-//	}
+	@Test void testLargest() {
+		String actual = queryProcessor.process("xy: which of the following numbers is the largest: 208, 95");
+		assertEquals("208", actual);
+	}
 
 }

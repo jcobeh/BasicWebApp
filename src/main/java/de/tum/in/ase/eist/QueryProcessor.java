@@ -11,16 +11,20 @@ public class QueryProcessor {
             return "jake the snake";
         }
         if(query.contains("which of the following numbers is the largest")) {
-            String[] tokens = query.split(": ")[1].split(", ");
+            String[] tokens = query.split(": ")[2].split(", ");
             int largest = -1;
             for(int i = 0; i < tokens.length; i++) {
-
+                int currentInt = Integer.parseInt(tokens[i]);
+                if(currentInt > largest) {
+                    largest = currentInt;
+                }
             }
+            return String.valueOf(largest);
         }
         if(query.contains("what is")) {
             if(query.contains("plus")) {
-                // what is 12 plus 3
-                // what is 2 plus 23
+                // xy: what is 12 plus 3
+                // xy: what is 2 plus 23
                 String[] tokens = query.split(" ");
 
                 int first = Integer.parseInt(tokens[3]);
@@ -28,7 +32,6 @@ public class QueryProcessor {
                 int result = first + second;
                 return String.valueOf(result);
             }
-            return "11";
         }
         if (query.contains("shakespeare")) {
             return "William Shakespeare (26 April 1564 - 23 April 1616) was an " +
